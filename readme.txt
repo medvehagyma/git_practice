@@ -21,3 +21,12 @@ Git will be controlled with commands, the most important ones are git status, gi
 
 GitHub is a hosting service, it provides free servers where programmers can put their remote repositories.
 This allows them to work together on the same codebase asynchronously.
+
+Commits are local changes that live on my computer.
+When I want everyone else to start working with my changes I can push these commits to the remote reprository with the following command 
+git push
+Sometimes git push needs to be configured, because we need to tell it which remote repository to push to.
+In this case we didn't need to configure it because we created the remote repository first on GitHub.
+And then we used the cloning command to create the local reprository on my computer.
+git clone https://github.com/medvehagyma/git_practice.git
+Because of this in this local repository git automatically knows to push to this remote repository.
