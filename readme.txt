@@ -14,3 +14,5 @@ The commit message should be a brief description of the changes contained within
 Commit message convention
 when you want to write a commit message ask to yourself what will this commit do 
 the answer this commit will ... "make these changes"
+
+Checking the process.
