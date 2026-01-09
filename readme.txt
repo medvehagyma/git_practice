@@ -23,7 +23,6 @@ Because the command line terminal is a tool of the operating system and by using
 Optionally if you are using some development environment that supports built in git usage you may also use that.
 For example VSCode has a built in terminal that can also be used to execute git commands.
 Other version control systems are Subversion (SVN) and perforce.
-
 GitHub is a hosting service, it provides free servers where programmers can put their remote repositories.
 This allows them to work together on the same codebase asynchronously.
 Other popular version control hosting services are GitLab and BitBucket.
