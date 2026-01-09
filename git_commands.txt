@@ -1,0 +1,25 @@
+git status
+This will tell us which branch we are currently on, which files have untracked changes,
+which files have changes to be commited and how many commits we currently have.
+It can also give us information about any ongoing operations that we are doing, like merge conflict resolutions
+and interactive rebasings. This is an extremely handy and common git command. Many people will use git status after every other command they execute.
+
+git add <files-to-be-tracked>
+Eg.: git add readme.txt
+Sometimes we don't want to track every single change that has been made. For example if your file system contains files that store your personal data
+you don't want to share that with your colleagues, so you don't version control those files. Whatever you want to version control, you add to the "staging
+area" with git add.
+Special case:
+git add .
+This will add every single currently untracked change to the staging area.
+The staging area contains the changes not yet committed, but that you want to commit.
+
+git commit -m <commit-message>
+Eg.: git commit -m "Add more text to readme.txt"
+When you are done adding all of your changes to the staging area and you are happy with the current changes, you can make a "snapshot" of the current
+state of the repo saying that you are done implementing whatever you were working on in this commit. The commit message should briefly explain what
+the changes in this commit are about.
+Special case:
+git commit -a -m <commit-message>
+If you don't want to separately execute "git add ." for tracking all the current changes you can just add the -a flag and that will automatically
+run it before commiting.
