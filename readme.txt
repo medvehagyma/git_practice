@@ -43,3 +43,14 @@ example
 git log -n 5
 Usually when you use this command in the terminal git will enter a commit view mode. While you are in this mode you can't use the terminal.
 To quit this mode just press Q.
+
+Git is a great tool for avoiding mistakes in the code base by making the development easy to follow, easy to track changes, revert to a previous
+stat if I made a mistake and so on.
+Many times however we make mistakes while using git itself for example we make a typo in a commit message. 
+It is important to keep the git history clean and free of mistakes that could cause confusion. 
+When we make a mistake using git we have many options to fix that.
+One of the most commonly used is the interactive rebase.
+
+git rebase -i HEAD~3
+This means that I want to replay the last commits from the latest commit with some modifications that can be specified.
+Alternatively this command says that I want to put the third commit onto the fourth commit with some modifications.
