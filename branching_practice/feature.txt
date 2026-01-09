@@ -1,2 +1,4 @@
 In this file I will practice using branches.
-Feature not yet implemented.
+I used the following command to create a new branch where I can safely make changes without disturbing the state of the main branch:
+git checkout -b <name-of-the-new-branch>
+for example git checkout -b feature-practice
