@@ -36,3 +36,10 @@ In this case we didn't need to configure it because we created the remote reposi
 And then we used the cloning command to create the local reprository on my computer.
 git clone https://github.com/medvehagyma/git_practice.git
 Because of this in this local repository git automatically knows to push to this remote repository.
+
+The following command may be used to view the last n count of commits with their authors, dates and commit messages.
+git log -n <count>
+example 
+git log -n 5
+Usually when you use this command in the terminal git will enter a commit view mode. While you are in this mode you can't use the terminal.
+To quit this mode just press Q.
