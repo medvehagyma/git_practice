@@ -18,6 +18,10 @@ the answer this commit will ... "make these changes"
 Git is a version control system that tracks changes in text files. 
 This is tipically used by programmers writing code. So it's a program that runs on your computer.
 Git will be controlled with commands, the most important ones are git status, git add, git commit, git push, git pull.
+These git commands can be executed from the command line terminal or the git bash terminal. For beginners the command line terminal is recommended.
+Because the command line terminal is a tool of the operating system and by using git from the cmd you also practice using the operating system.
+Optionally if you are using some development environment that supports built in git usage you may also use that.
+For example VSCode has a built in terminal that can also be used to execute git commands.
 Other version control systems are Subversion (SVN) and perforce.
 
 GitHub is a hosting service, it provides free servers where programmers can put their remote repositories.
