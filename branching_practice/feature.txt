@@ -2,3 +2,19 @@ In this file I will practice using branches.
 I used the following command to create a new branch where I can safely make changes without disturbing the state of the main branch:
 git checkout -b <name-of-the-new-branch>
 for example git checkout -b feature-practice
+
+The main branch should always contain a state of the repository that is complete, tested, and ready to be used by the users.
+We don't want any half-finished features of the main branch and we especially don't want code that crashes on the main branch.
+Instead development should take place on other branches usually we create feature branches but simple things like a quick bug-fix 
+shoould also be developed on a bug-fix branch.
+Git doesn't enforce any categorization of the branches but as with commits it is also true here that a branch should have a single purpose.
+
+When we are done developing a feature the contents of the feature branch may be merged into the main branch.
+This means that all the changes that were committed to the feature branch now get committed to the main branch all at once.
+This ensures that there is no time period where the main branch has inconsistent content.
+
+If during development certain lines on the main branch were changed that we also changed on the feature branch then git won't be able to
+decide how it should merge these changes together.
+This is called a merge conflict and the programmer has to resolve it manually.
+So they have to decide which version they want to keep, possibly they want to resolve it in a way that functionally will keep the changes from
+both the main and the feature branch.
