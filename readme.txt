@@ -54,3 +54,24 @@ One of the most commonly used is the interactive rebase.
 git rebase -i HEAD~3
 This means that I want to replay the last commits from the latest commit with some modifications that can be specified.
 Alternatively this command says that I want to put the third commit onto the fourth commit with some modifications.
+
+Upon executing this command git will open up a text file that contains the list of commits that we want to replay.
+We can choose what to do with each of this commit. Git provides us with a list of options with descriptions.
+For example to fix a commit message typo we should use the pick and the reword options.
+Whichever commit is fine we just pick that one as it is.
+For whichever commit has a typo in a commit message we change the pick option to the reword option so that we can rewrite the commit message
+upon replaying the commit.
+When we are done with our selections we can close this file and git will start replaying the commits.
+When we encounter a commit that was marked for rewording git will open up another text file containing the original commit message.
+We can rewrite this message in this file to whatever we want and close the file when we are done.
+Git will use the new commit message when replaying this commit.
+
+Once the rebasing is done the git history in our local repository will be changed.
+This means that it is now different in the remote repository so we can't really push to the remote repository.
+In this case we may use the force push option with the following command: 
+git push -f
+
+ATTENTION
+This will completely rewrite the history on the remote repository with the current state of the local repository.
+This can be an extremely dangerous command and whenever you want to execute it you should make sure that you know what you are doing
+and that the local repository is in an acceptable state.
