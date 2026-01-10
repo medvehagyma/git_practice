@@ -18,3 +18,12 @@ decide how it should merge these changes together.
 This is called a merge conflict and the programmer has to resolve it manually.
 So they have to decide which version they want to keep, possibly they want to resolve it in a way that functionally will keep the changes from
 both the main and the feature branch.
+
+When we are done developing a feature on the feature branch we can switch back to the main branch with the following command:
+git switch <target-branch> 
+for example git switch main
+
+Once we are back on the main branch we can merge the content of the feature branch into the main branch with the following command:
+git merge <source-branch>
+for example git merge feature-practice
+When we are switching between branches and doing operations on them it is a good idea to often execute git status.
