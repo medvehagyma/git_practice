@@ -4,3 +4,21 @@ When we are working in teams or if we want to organise our work a bit better ins
 or raise pull requests.
 Pull requests represent a merging task so they have a source branch where the work is being done and a target branch into which the new changes
 will be merged.
+
+Pull requests can be raised well ahead of merging.
+Pull requests represent a set of changes that we want to merge from the source branch to the target branch.
+A pull request will alway display the commits that are present on the feature branch but not present on the target branch.
+This way we can easily see what changes were made compared to the target branch.
+On gitHub we can add titles, descriptions and comments to a pull request.
+We can also see the changes themselves in the code. We can even write comments at specific lines in the changed codes.
+
+Pull requests serve two main purposes.
+Firstly before we merge our changes the other collaboratos in the repository can review our changes allowing them to spot mistakes that we missed.
+This is called a code review.
+Secondly code reviews are a great chance for learning together.
+Many times even if our reviewers don't find any mistakes in the code they may still write comments askig us to explain what we did and why we
+did it that way.
+If we answer these questions they may understand the code better and we may also gain some insight.
+
+Usually we should not merge pull requests before gaining approvals from our code reviewers though gitHub doesn't seem to enforce this on 
+default settings.
