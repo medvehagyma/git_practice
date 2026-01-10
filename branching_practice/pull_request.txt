@@ -1,15 +1,15 @@
 In this file we will make notes of pull requests.
 
-When we are working in teams or if we want to organise our work a bit better instead of merging branches directly we can use gitHub to open up 
+When we are working in teams or if we want to organise our work a bit better instead of merging branches directly we can use GitHub to open up 
 or raise pull requests.
 Pull requests represent a merging task so they have a source branch where the work is being done and a target branch into which the new changes
 will be merged.
 
 Pull requests can be raised well ahead of merging.
 Pull requests represent a set of changes that we want to merge from the source branch to the target branch.
-A pull request will alway display the commits that are present on the feature branch but not present on the target branch.
+A pull request will always display the commits that are present on the feature branch but not present on the target branch.
 This way we can easily see what changes were made compared to the target branch.
-On gitHub we can add titles, descriptions and comments to a pull request.
+On GitHub we can add titles, descriptions and comments to a pull request.
 We can also see the changes themselves in the code. We can even write comments at specific lines in the changed codes.
 
 Pull requests serve two main purposes.
@@ -20,5 +20,5 @@ Many times even if our reviewers don't find any mistakes in the code they may st
 did it that way.
 If we answer these questions they may understand the code better and we may also gain some insight.
 
-Usually we should not merge pull requests before gaining approvals from our code reviewers though gitHub doesn't seem to enforce this on 
+Usually we should not merge pull requests before gaining approvals from our code reviewers though GitHub doesn't seem to enforce this on 
 default settings.
