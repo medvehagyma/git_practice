@@ -1,0 +1,6 @@
+In this file we will make notes of pull requests.
+
+When we are working in teams or if we want to organise our work a bit better instead of merging branches directly we can use gitHub to open up 
+or raise pull requests.
+Pull requests represent a merging task so they have a source branch where the work is being done and a target branch into which the new changes
+will be merged.
