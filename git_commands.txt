@@ -10,9 +10,11 @@ Sometimes we don't want to track every single change that has been made. For exa
 you don't want to share that with your colleagues, so you don't version control those files. Whatever you want to version control, you add to the "staging
 area" with git add.
 Special case:
-git add .
+git add -A
 This will add every single currently untracked change to the staging area.
 The staging area contains the changes not yet committed, but that you want to commit.
+The following may also be used to achieve similar results, though the mechanics of it is not technically the same:
+git add .
 
 git commit -m <commit-message>
 Eg.: git commit -m "Add more text to readme.txt"
@@ -23,3 +25,47 @@ Special case:
 git commit -a -m <commit-message>
 If you don't want to separately execute "git add ." for tracking all the current changes you can just add the -a flag and that will automatically
 run it before commiting.
+
+git push
+When you are done with your local changes and they are ready to be shared with others so that they can work with them, you can push your commits to the
+remote repository.
+Special case:
+git push -f
+ATTENTION: this is a dangerous command. This will overwrite the contents of the remote repository with no regards for its current content and without
+preserving it's history. Only use when you are absolutely sure you want to do it. -f is short for --force.
+
+git init
+This will create a brand new local git repository of a folder on your computer. Repositories are just like normal folders, but git will include the history
+of the states of the contents of the folder.
+
+git clone <remote-repository-url>
+Eg.: git clone https://github.com/medvehagyma/git_practice.git
+This can be used to create a local git repository on your computer from an already existing remote repository that lives for example on GitHub.
+
+git log -n <number-of-commits-to-be-viewed>
+Eg.: git log -n 5
+Sometimes we want to check what commits were last made to our repository. This command lets us do that after specifying how many commits we want to view.
+It will display the commit messages, authors and times of the last n number of commits.
+
+git rebase -i HEAD~<commit-to-replay-from>
+Eg.: git rebase -i HEAD~3
+Sometimes we want to make changes to the git history itself. Fix typos in commit messages, add a little fix to a previous commit that we missed originally, etc.
+The interactive rebase command lets us do this. It will replay our commits from a specified starting commit. For example HEAD~3 is the third commit counting
+backwards from our most recent commit, so we will replay the last 3 commits made to the repo. An editor will open up and git will let us decide what
+we want to do with each of the commits. Git provides helpful instructions to do this. For example if we want to rewrite a previous commit message we can choose
+to "reword" a commit, which will preserve the changes made in the commit, but let us write a new commit message for it.
+
+git checkout -b <name-of-the-new-branch>
+Eg.: git checkout -b summation-practice
+Often we will want to separate which changes are made to the repo at a single time while also working on many different kinds of changes simultaneously.
+This provides structure, mental clarity, separation of issues. When you checkout a new branch, you take a copy of the contents of the repo and make a snapshot of it.
+Then any changes you make to the repo on the new branch will not appear on any of the other branches and will let you work on your stuff without interference
+from other changes being made to the repo.
+
+git switch <target-branch>
+Eg.: git switch summation-practice
+Used to switch between already existing branches.
+
+git merge <source-branch>
+Used to bring the changes over from another branch to the current one. This may be used when you are done developing a feature in an isolated environment
+on a different branch and you want to make that feature a part of the current branch. Usually this goes like main <- dev <- feature, bugfix, hotfix branches
